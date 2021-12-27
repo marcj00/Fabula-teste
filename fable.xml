@@ -1,6 +1,36 @@
 <fable>
-	<page>
-  
+	<page background="bg.png">
+	<agent img="plat-grama1.png" x='100' y='100' width='100' height='100'/> 
+  <agent img="plat-grama2.png" x='200' y='100' width='100' height='100'/> 
+  <agent img="plat-grama3.png" x='300' y='100' width='100' height='100'/> 
     
+  <agent text="Texto teste" x='30' y="430" font-size='22'/>
+	<agent text='Clique na caixa para ir para a proxima página' x='200' y='290' width='150'/>
+	<agent img='box.png' x='200' y='200' width='80' height='80' on-touch='_NEXT_PAGE'/>
+    
+  <agent text="Texto teste, clique para inicar loop de textos" x="30" y="400" font-size='14' on-touch='story1'>
+  	<story1 text="Texto story1, clique para ir para story4" on-touch='story4'/>
+    <story2 text="Texto story2, clique para ir para story3" on-touch='story3'/>
+    <story3 text="Texto story3, clique para ir para story1" on-touch='story1'/>
+    <story4 text="Texto story4, clique para ir para story2" on-touch='story2'/>
+  </agent>
+    
+  </page>
+  
+	<page background='bg.png'>
+  <agent img='plat-grama1.png' x='10' y='100' width='100' height='100'/>
+  <agent img='plat-grama2.png' x='110' y='100' width='200' height='100'/>
+  <agent img='plat-grama3.png' x='310' y='100' width='100' height='100'/>
+    
+  <agent text='Texto teste da segunda página :D' x='50' y='400' font-size='20'/>
+  
+  <agent text='Clique na caixa para transforma-la em um arbusto' x='50' y='280' font-size='15' width='200' on-trigger='arbusto'>
+  	<arbusto text='Você transformou a caixa em um arbusto!'/>
+  </agent>
+  
+  <agent img='box.png' x='100' y='200' width='50' height='50' on-touch='arbusto'>
+    <arbusto img='Bush (1).png' width='100'/>
+  </agent>
+  
   </page>
 </fable>
